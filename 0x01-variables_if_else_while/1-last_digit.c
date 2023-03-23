@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-
+#include "main.h"
 /**
  * main - entry point*
  * Description: print the last digit of the number stored in the variable n
