@@ -8,15 +8,13 @@
 
 int main(void)
 {
-	int a = 48;
+	int a = 48, b = 97;
 
 	while (a <= 57)
 	{
 		putchar(a);
 		a++;
 	}
-
-	int b = 97;
 
 	while (b <= 102)
 	{
@@ -25,4 +23,5 @@ int main(void)
 
 	}
 	putchar('\n');
+	return (0);
 }
