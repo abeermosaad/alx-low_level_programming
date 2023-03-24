@@ -2,42 +2,32 @@
 
 /**
  * main - entry point
- * Description: print the alphabet in lowercase and uppercase
+ * Description:
  * Return: Always 0
  */
 
 int main(void)
 {
-	int a = 48, b, c, d;
+	int a = 0, b;
 
-	while (a <= 57)
+	while (a <= 99)
 	{
-		b = a;
-		while (b <= 57)
+		b = a + 1;
+		while (b <= 99)
 		{
-			c = b;
-			while (c <= 57)
+			putchar((a / 10) + 48);
+			putchar((a % 10) + 48);
+			putchar(' ');
+			putchar((b / 10) + 48);
+			putchar((b % 10) + 48);
+			if ((a != 98) || (b != 99))
 			{
-				d = c + 1;
-				while (d <= 57)
-				{
-					putchar(a);
-					putchar(b);
-					putchar(' ');
-					putchar(c);
-					putchar(d);
-					if (b != 58)
-					{
-						putchar(',');
-						putchar(' ');
-					}
-					d++;
-				}
-				c++;
+				putchar(',');
+				putchar(' ');
 			}
+
 			b++;
 		}
-
 		a++;
 	}
 	putchar('\n');
