@@ -13,7 +13,7 @@ int main(void)
 	while (a <= 57)
 	{
 		b = a;
-		while (b < 57)
+		while (b <= 57)
 		{
 			c = b;
 			while (c <= 57)
