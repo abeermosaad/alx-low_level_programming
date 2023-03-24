@@ -29,7 +29,7 @@ int main(void)
 				c++;
 
 			}
-			b++
+			b++;
 		}
 
 		a++;
