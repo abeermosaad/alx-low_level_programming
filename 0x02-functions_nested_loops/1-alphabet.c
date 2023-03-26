@@ -1,15 +1,23 @@
 #include "main.h"
 
 /**
- * main - entry point
- * Description : prints the alphabet, in lowercase
- * Return: Always 0
+ * print_alphabet - prints the alphabet, in lowercase
+ *
+ * Return: on success, prints the alphabet, in lowercase
+ *         on error, -1 is returned, and errno is set appropriately
  */
 
-int main(void)
+void print_alphabet(void)
 {
-	print_alphabet();
-	return (0);
+
+	char a = 'a';
+
+	while (a <= 'z')
+	{
+		_putchar(a);
+		a++;
 
 
+	}
+	_putchar('\n');
 }
