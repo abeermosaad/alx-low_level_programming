@@ -13,7 +13,7 @@ int main(void)
 {
 	char a[] = "_putchar";
 
-	for (int i = 0; i < strlen(a); i++)
+	for (size_t i = 0; i < strlen(a); i++)
 	{
 		_putchar(a[i]);
 	}
