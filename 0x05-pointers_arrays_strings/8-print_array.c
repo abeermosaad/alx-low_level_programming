@@ -5,7 +5,7 @@
 /**
  * print_array - prints every other character of a string
  *
- * @*a: the parameter
+ * @a: the parameter
  *
  * @n: the parameter
  *
