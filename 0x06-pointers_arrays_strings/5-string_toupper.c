@@ -15,9 +15,9 @@ char *string_toupper(char *str)
 
 	for (i = 0; i <= (int)strlen(str); i++)
 	{
-		if (str[i] >= 'A' && str[i] <= 'Z')
+		if (str[i] >= 'a' && str[i] <= 'z')
 		{
-			str[i] += 32;
+			str[i] -= 32;
 		}
 
 	}
