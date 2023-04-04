@@ -18,12 +18,14 @@ char *_strchr(char *s, char c)
 
 	for (i = 0; i < (int)strlen(s); i++)
 	{
-		s++;
+		
 		if (s[i] == c)
-		{
+		{   
+            s++;
 			return (s);
 		}
         s++;
+        
 	}
 	return (NULL);
 
