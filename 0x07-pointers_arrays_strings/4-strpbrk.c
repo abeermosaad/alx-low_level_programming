@@ -13,7 +13,7 @@
 */
 char *_strpbrk(char *s, char *accept)
 {
-    int i, j;
+	int i, j;
 
 	for (j = 0; j < (int)strlen(s); j++)
 	{
@@ -22,10 +22,10 @@ char *_strpbrk(char *s, char *accept)
 			if (s[j] == accept[i])
 			{
 				s++;
-                return (s);
+				return (s);
 			}
 		}
-        s++;
-    }
-    return (NULL);
+		s++;
+	}
+	return (NULL);
 }
