@@ -36,9 +36,11 @@ char *_strstr(char *haystack, char *needle)
 	}
 	for (n = 0; n < (int)strlen(needle); n++)
 	{
-		if (needle[index + n] != haystack[index2 + n] && n != (int)strlen(needle) - 1)
+		if (needle[index + n] != haystack[index2 + n] &&
+			n != (int)strlen(needle) - 1)
 			return (needle);
-		if (needle[index + n] == haystack[index2 + n] && n == (int)strlen(needle) - 1)
+		if (needle[index + n] == haystack[index2 + n] &&
+			n == (int)strlen(needle) - 1)
 			return (needle);
 	}
 	return (NULL);
