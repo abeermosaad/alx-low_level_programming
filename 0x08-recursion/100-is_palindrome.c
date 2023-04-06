@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- * is_palindrome - returns 1 if a string is a palindrome and 0 if not.
+ * is_palindrome - returns 1 if a string is a palindrome and 0 
  *
  * @s: the string
  *
@@ -11,7 +11,7 @@
 */
 int is_palindrome(char *s)
 {
-	int i, flag = 1;
+	long i, flag = 1;
 
 	for (i = 0; i < ((int)strlen(s) / 2); i++)
 	{
