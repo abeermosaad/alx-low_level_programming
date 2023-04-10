@@ -1,5 +1,5 @@
 #include "main.h"
-#include <string.h>
+
 /**
  * *_strncat - concatenates @src to @dest
  *

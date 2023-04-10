@@ -1,6 +1,5 @@
 #include "main.h"
-#include <string.h>
-#include <stdio.h>
+
 
 /**
  * *_strcpy - copies the string
