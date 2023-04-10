@@ -1,6 +1,6 @@
-#include <string.h>
+
 #include "main.h"
-#include <stdio.h>
+
 
 /**
  * _strspn - copies memory area
@@ -13,25 +13,5 @@
 */
 unsigned int _strspn(char *s, char *accept)
 {
-	int i, j, len = 0, flag;
-
-	for (j = 0; j < (int)strlen(s); j++)
-	{
-		for (i = 0; i < (int)strlen(accept) ; i++)
-		{
-			if (s[j] == accept[i])
-			{
-				flag = 1;
-				break;
-			}
-		}
-		if (flag == 1)
-		{
-			len++;
-			flag = 0;
-		}
-		else
-			break;
-	}
-	return (len);
+	
 }
