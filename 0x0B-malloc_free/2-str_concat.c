@@ -14,21 +14,36 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	int len;
-	int b, a;
-	char *new;
+	int i = 0, l = 0;
+	char *array;
+	int j = 0, k = 0;
 
-	b = 0;
-	a = 0;
-	len = (int)strlen(s1) + (int)strlen(s2);
-	new = malloc(sizeof(char) * len + 1);
-	if (!new)
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
+
+	while (s1[i])
+		i++;
+	while (s2[j])
+		j++;
+
+	l = i + j;
+	array = malloc(1);
+	if (array == NULL)
 		return (NULL);
-	while (s1 && s1[a])
-		new[b++] = s1[a++];
-	a = 0;
-	while (s2 && s2[a])
-		new[b++] = s2[a++];
-	new[b] = '\0';
-	return (new);
+	j = 0;
+	while (k < l)
+	{
+		if (k <= i)
+			array[k] = s1[k];
+		if (k >= i)
+		{
+			array[k] = s2[j];
+			j++;
+		}
+		k++;
+	}
+	array[k] = '\0';
+	return (array);
 }
