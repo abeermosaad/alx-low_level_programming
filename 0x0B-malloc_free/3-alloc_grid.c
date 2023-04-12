@@ -7,7 +7,7 @@
  * alloc_grid - initiates an array of arrays of integers
  *
  * @width: width of the grid
- * 
+ *
  * @height: height of the grid
  *
  * Return: NULL or the grid
