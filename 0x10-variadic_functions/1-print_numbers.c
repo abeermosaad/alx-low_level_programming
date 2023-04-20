@@ -21,6 +21,10 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 			printf("%d", x);
 			continue;
 		}
+		if (separator == NULL)
+		{
+			printf("%d", x);
+		}
 		printf("%d%s", x, separator);
 	}
 	printf("\n");
