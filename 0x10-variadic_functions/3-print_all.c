@@ -1,5 +1,6 @@
 #include "variadic_functions.h"
 #include <string.h>
+#include <stdlib.h>
 /**
  * print_char - .
  * @args: .
