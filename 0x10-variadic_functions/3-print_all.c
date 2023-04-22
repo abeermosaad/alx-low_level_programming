@@ -75,7 +75,7 @@ void print_all(const char * const format, ...)
 	{'f', print_float}, {'c', print_char}};
 	va_start(args, format);
 	i = 0;
-	while ((i < ((int)strlen(format))) && (format != NULL))
+	while ((format) && (format[i]))
 	{
 		m = strchr(s, format[i]);
 		while (m)
