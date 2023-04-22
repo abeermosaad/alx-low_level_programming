@@ -39,6 +39,8 @@ void print_float(va_list args)
 void print_string(va_list args)
 {
 	printf("%s", va_arg(args, char *));
+	if ((va_arg(args, char *)) == NULL)
+		printf("(nil)");
 }
 /**
  * print_all - .
@@ -53,10 +55,10 @@ void print_all(const char * const format, ...)
 	char s[] = "sifc", *m;
 	/**
 	* struct - Struct cformat
- 	*
- 	* @c: The operator
- 	* @type_of: The function associated
- 	*/
+	*
+	*@c: The operator
+	*@type_of: The function associated
+	*/
 	struct type
 	{
 		char c;
