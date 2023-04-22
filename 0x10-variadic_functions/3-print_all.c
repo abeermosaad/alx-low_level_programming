@@ -38,9 +38,15 @@ void print_float(va_list args)
  */
 void print_string(va_list args)
 {
-	printf("%s", va_arg(args, char *));
-	if ((va_arg(args, char *)) == NULL)
-		printf("(nil)");
+	char *str;
+
+	str = va_arg(args, char*);
+	if (str != NULL)
+	{
+		printf("%s", str);
+		return;
+	}
+	printf("(nil)");
 }
 /**
  * print_all - .
@@ -50,7 +56,7 @@ void print_string(va_list args)
  */
 void print_all(const char * const format, ...)
 {
-	va_list arg;
+	va_list args;
 	int i, idx;
 	char s[] = "sifc", *m;
 	/**
@@ -67,7 +73,7 @@ void print_all(const char * const format, ...)
 
 	struct type tp[] = {{'s', print_string}, {'i', print_int},
 	{'f', print_float}, {'c', print_char}};
-	va_start(arg, format);
+	va_start(args, format);
 	i = 0;
 	while ((i < ((int)strlen(format))) && (format != NULL))
 	{
@@ -75,7 +81,7 @@ void print_all(const char * const format, ...)
 		while (m)
 		{
 			idx = (int)(m - s);
-			tp[idx].type_of(arg);
+			tp[idx].type_of(args);
 			if (format[i + 1] != '\0')
 				printf(", ");
 			break;
@@ -83,4 +89,5 @@ void print_all(const char * const format, ...)
 		i++;
 	}
 	printf("\n");
+	va_end(args);
 }
