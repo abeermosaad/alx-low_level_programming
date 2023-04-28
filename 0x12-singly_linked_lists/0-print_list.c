@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * print_list - rints all the elements of a list_t list.
+ * print_list - prints all the elements of a list_t list.
  * @h: head
  * Return: Always cnt.
  */
