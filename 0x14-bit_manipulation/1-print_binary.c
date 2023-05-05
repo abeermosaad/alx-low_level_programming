@@ -1,51 +1,29 @@
 #include "main.h"
 /**
- * _pow - calulate the power
- * @num: num
- * @power: the power
- * Return: num
- */
-int _pow(int num, int power)
-{
-	int i;
-
-	if (power == 0)
-		return (1);
-	if (power == 1)
-		return (num);
-	i = power - 1;
-	while (i--)
-	{
-		num *= 2;
-	}
-	return (num);
-}
-/**
  * print_binary - prints the binary representation of a number
- * @n: num 
- * Return: non
+ * @n: num
+ * Return: non :)
  */
 void print_binary(unsigned long int n)
 {
-	unsigned long int dev, result;
-	char flag;
+	int cnt = 0;
+	unsigned long int temp;
 
-	flag = 0;
-	dev = _pow(2, sizeof(unsigned long int) * 8 - 1);
-
-	while (dev != 0)
+	if (n == 0)
+		_putchar('0');
+	temp = n;
+	while (temp)
 	{
-		result = n & dev;
-		if (result == dev)
-		{
-			flag = 1;
-			_putchar('1');
+		temp = temp >> 1;
+		cnt++;
+	}
+	while (cnt--)
+	{
+		int b = 1 << cnt;
 
-		}
-		else if (flag == 1 || dev == 1)
-		{
-			_putchar('0');
-		}
-		dev >>= 1;
+		if (b & n)
+			_putchar('1');
+		else
+			_putchar ('0');
 	}
 }

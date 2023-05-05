@@ -1,20 +1,19 @@
 #include "main.h"
 /**
  * _pow - calulate the power
- * @num: num
+ * @base: base
  * @power: the power
  * Return: num
  */
-int _pow(int num, int power)
+int _pow(int base, int power)
 {
-	int i;
+	int num = base;
 
 	if (power == 0)
 		return (1);
 	if (power == 1)
 		return (num);
-	i = power - 1;
-	while (i--)
+	while (--power)
 	{
 		num *= 2;
 	}
