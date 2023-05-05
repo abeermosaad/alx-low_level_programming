@@ -17,6 +17,8 @@ void print_binary(unsigned long int n)
 		temp = temp >> 1;
 		cnt++;
 	}
+	if (cnt == 64)
+		cnt = cnt >> 1;
 	while (cnt--)
 	{
 		unsigned long int b = 1 << cnt;
