@@ -26,7 +26,7 @@ int get_bit(unsigned long int n, unsigned int index)
 		n = n >> 1;
 		cnt++;
 	}
-	if (!flag)
+	if (!flag || index >= index >= sizeof(unsigned int) * 8)
 		return (-1);
 	return (value);
 }
