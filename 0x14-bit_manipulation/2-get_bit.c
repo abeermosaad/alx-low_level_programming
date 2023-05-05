@@ -19,7 +19,7 @@ int get_bit(unsigned long int n, unsigned int index)
 			if (n & 1)
 				value = 1;
 			else
-				value = 0;			
+				value = 0;
 			break;
 		}
 		n = n >> 1;
