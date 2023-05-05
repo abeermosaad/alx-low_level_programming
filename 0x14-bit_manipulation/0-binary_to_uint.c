@@ -14,9 +14,7 @@ int _pow(int base, int power)
 	if (power == 1)
 		return (num);
 	while (--power)
-	{
 		num *= 2;
-	}
 	return (num);
 }
 /**
