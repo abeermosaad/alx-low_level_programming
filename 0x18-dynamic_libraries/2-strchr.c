@@ -1,6 +1,6 @@
 
 #include "main.h"
-
+#include <stddef.h>
 
 /**
  * _strchr - copies memory area
