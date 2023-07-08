@@ -19,19 +19,18 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	if (!item)
 		return (0);
-
+	if (ht == NULL)
+		return (0);
 	if (key == NULL || strlen(key) == 0)
 	{
 		free(item);
 		return (0);
 	}
-
 	item->key = strdup(key);
 	item->value = strdup(value);
 	item->next = NULL;
 
 	index = key_index((const unsigned char *) item->key, ht->size);
-
 	if (ht->array[index] != NULL)
 	{
 		curr = ht->array[index];
