@@ -3,7 +3,7 @@
 #include <stddef.h>
 
 /**
- * linear_search - searches for a value in an array of integers using the
+ * linear_search - searches for a value in an array of integers
  * @array: pointer to the first element of the array to search in
  * @size: number of elements in array
  * @value: value to search for
@@ -16,14 +16,9 @@ int linear_search(int *array, size_t size, int value)
 
 	for (i = 0; i < size; i++)
 	{
+		printf("Value checked array[%lu] = [%d]\n", i, array[i]);
 		if (array[i] == value)
-		{
-			printf("Value checked array[%lu] = [%d]\n", i, array[i]);
 			return (i);
-		}
-		else
-			printf("Value checked array[%lu] = [%d]\n", i, array[i]);
 	}
-
 	return (-1);
 }
