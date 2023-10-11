@@ -31,7 +31,7 @@ int advanced_binary(int *array, size_t size, int value)
 	size_t left = 0, right = size - 1, mid = 0;
 	int idx = -1;
 
-	if (!array)
+	if (!array || !size)
 		return (-1);
 
 	print_array(array, size);
