@@ -20,7 +20,7 @@ int binary_search(int *array, size_t size, int value)
 
 	while (l <= r)
 	{
-		print_array(array, l, r);
+		print_array1(array, l, r);
 		mid = l + (r - l) / 2;
 		if (array[mid] == value)
 			return (mid);
@@ -40,7 +40,7 @@ int binary_search(int *array, size_t size, int value)
  * Return: Non
 */
 
-void print_array(int *array, size_t start, size_t end)
+void print_array1(int *array, size_t start, size_t end)
 {
 	size_t i;
 
